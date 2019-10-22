@@ -2,3 +2,21 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.game-area {
+  margin-top: 25px;
+  width: 450px;
+}
+
+.tick-tack-grid div md-grid-tile {
+
+  cursor: pointer;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
+
+}
+

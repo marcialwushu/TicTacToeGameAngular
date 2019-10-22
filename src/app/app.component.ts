@@ -13,4 +13,26 @@ export class AppComponent {
   constructor(public gs: GameService){
 
   }
+
+  playerClick(i) {
+    if(this.gs.turn == 0) {
+      this.gs.blocks[i].setValue("tick");
+    }else {
+      this.gs.blocks[i].setValue("cross")
+    }
+
+    this.changeTurn();
+  }
+
+  botTurn() {
+    alert("Bot's turn");
+  }
+
+  changeTurn() {
+    this.gs.changeTurn();
+
+    if(this.gs.turn == 1) { //Bot turn
+      this.botTurn();
+    }
+  }
 }

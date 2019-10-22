@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -16,12 +16,15 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
+</ul> -->
 
 <div class="container">
   <div class="col-md-8">
-    <div class="game-area">
+    <div class="game-area" >
+      <mat-grid-list class="tick-tack-grid" cols="3" >
+        <mat-grid-tile *ngFor="let block of gs.blocks; let i = index; trackBy: trackByFn" (click)="playerClick(i)"><i [class]="block.symbol == 'done' ? 'material-icons tick' : 'material-icons cross'">{{ block.symbol }}</i></mat-grid-tile>
 
+      </mat-grid-list>
     </div>
   </div>
   <div class="col-md-4">

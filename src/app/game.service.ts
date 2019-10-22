@@ -38,12 +38,22 @@ export class GameService {
 
     //Player 1
     var player1 = new Player();
+    player1.bot = false;
 
     //Player 2
     var player2 = new Player();
 
     this.players.push(player1);
     this.players.push(player2);
+
+  }
+
+  changeTurn() {
+    if(this.turn == 0) {
+      this.turn = 1;
+    }else {
+      this.turn = 0;
+    }
 
   }
 }
