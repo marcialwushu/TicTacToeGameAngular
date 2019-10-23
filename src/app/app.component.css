@@ -1,3 +1,9 @@
 mat-grid-tile {
   background: lightblue;
 }
+
+
+.game-area {
+  margin-top: 25px;
+  width: 450px;
+}
