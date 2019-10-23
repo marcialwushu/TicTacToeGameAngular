@@ -17,7 +17,15 @@ export class AppComponent {
   }
 
   newGame() {
+    this.gs.freeBlockRemaining = 9;
+    this.gs.initBlocks();
+    this.lock = false;
+    this.gs.turn = 0;
+  }
 
+  resetGame(event) {
+    location.reload();
+    event.preventDefault();
   }
 
 
@@ -53,6 +61,10 @@ export class AppComponent {
       this._snackBar.open("Winner:", "Player"+ (this.gs.turn +1), {
         duration: 4000,
       });
+
+      this.newGame();
+      return;
+
     } else {
       this.changeTurn();
     }
