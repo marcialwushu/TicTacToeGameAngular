@@ -35,4 +35,6 @@ export class AppComponent {
       this.botTurn();
     }
   }
+
+
 }
