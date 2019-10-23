@@ -3,6 +3,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AppComponent } from './app.component';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { GameService } from './game.service';
