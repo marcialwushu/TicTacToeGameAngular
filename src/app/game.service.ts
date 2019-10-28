@@ -49,11 +49,13 @@ export class GameService {
   }
 
   changeTurn() {
-    if(this.turn == 0) {
-      this.turn = 1;
-    }else {
+    if(this.turn == 1) {
       this.turn = 0;
+    }else {
+      this.turn = 1;
     }
+
+    return this.turn;
 
   }
 
